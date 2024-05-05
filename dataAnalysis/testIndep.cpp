@@ -24,8 +24,10 @@ long double approx(std::vector<std::vector<long double>> table) {
       long double val = std::pow(obs - est, 2) / est;
       sum += val;
 
-      // DEBUGGING
+      // if you want the output to be put in obs (est)
       std::cout << "obs: " << obs << " (" << est << ")" << '\n';
+
+      // DEBUGGING
       // std::cout << "observed: " << obs << 'n';
       // std::cout << "estimated: " << est << '\n';
       // std::cout << "value of (obs - est)^2 / est: " << val << '\n';
