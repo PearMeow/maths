@@ -24,8 +24,9 @@ long double approx(std::vector<std::vector<long double>> table) {
       long double val = std::pow(obs - est, 2) / est;
       sum += val;
 
-      // DEBUGGING ONLY
-      // std::cout << "observed: " << obs << '\n';
+      // DEBUGGING
+      std::cout << "obs: " << obs << " (" << est << ")" << '\n';
+      // std::cout << "observed: " << obs << 'n';
       // std::cout << "estimated: " << est << '\n';
       // std::cout << "value of (obs - est)^2 / est: " << val << '\n';
       // std::cout << "estimated is doing: " << 
@@ -38,11 +39,20 @@ long double approx(std::vector<std::vector<long double>> table) {
 }
 
 int main() {
+  // example usage of code > table organized in rows
+  // the last column and bottom row are totals, with the bottom right corner being the total of all
+  // in case you don't know how tables work :D
   std::vector<std::vector<long double>> table =
-  {{13, 26, 39},
-   {37, 72, 109},
-   {78, 157, 235},
-   {15, 21, 36},
-   {143, 276, 419}};
+  {{13,    26,    39},
+   {37,    72,    109},
+   {78,    157,   235},
+   {15,    21,    36},
+   {143,   276,   419}};
+  std::cout << approx(table) << std::endl;
+  table =
+  {{25, 39, 64},
+   {42, 40, 82},
+   {33, 21, 54},
+   {100, 100, 200}};
   std::cout << approx(table) << std::endl;
 }
