@@ -42,7 +42,7 @@ long double approx(std::vector<std::vector<long double>> table) {
 
 int main() {
   // example usage of code > table organized in rows
-  // the last column and bottom row are totals, with the bottom right corner being the total of all
+  // last column and bottom row are totals, bottom right corner is the total total
   // in case you don't know how tables work :D
   std::vector<std::vector<long double>> table =
   {{13,    26,    39},
@@ -51,6 +51,8 @@ int main() {
    {15,    21,    36},
    {143,   276,   419}};
   std::cout << approx(table) << std::endl;
+
+  // another test, with cleaner numbers
   table =
   {{25, 39, 64},
    {42, 40, 82},
