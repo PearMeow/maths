@@ -1,4 +1,4 @@
-ARGS=testIndep
+ARGS=sort
 default: run
 
 run: compile
@@ -11,4 +11,4 @@ good:
 	g++ -std=c++17 -pedantic -Wall -Wextra -Werror -o $(ARGS).exe -g $(ARGS).cpp
 
 clean:
-	rm $(ARGS).exe
+	rm *.exe
