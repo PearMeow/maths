@@ -1,4 +1,4 @@
-ARGS=sort
+ARGS=testIndep
 default: run
 
 run: compile

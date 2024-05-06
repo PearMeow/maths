@@ -59,4 +59,11 @@ int main() {
    {33, 21, 54},
    {100, 100, 200}};
   std::cout << approx(table) << std::endl;
+
+  table = 
+  {{87, 31, 118},
+   {80, 89, 169},
+   {50, 73, 123},
+   {217, 193, 410}};
+  std::cout << approx(table) << std::endl;
 }
